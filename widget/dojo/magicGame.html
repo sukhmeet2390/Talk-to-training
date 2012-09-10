@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Genie!!</title>
+    <script type="text/javascript">
+    djConfig = {
+    	parseOnLoad : true,
+    	isDebug : false,
+        baseUrl : './'
+	}
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
+    <script type="text/javascript">
+        dojo.registerModulePath("dtdg","./dtdg");
+        dojo.require("dtdg.Genie");
+        dojo.ready(function(){
+            var g = new dtdg.Genie;
+			g.initialize();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

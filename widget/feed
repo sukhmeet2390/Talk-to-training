@@ -1,0 +1,18 @@
+1. move user box to a javascript class of its own.
+2. do not use global methods. Put them under a namaspaced element.
+3. make two globals - userList and tweetList. Now you can invoke global methods in those files by doing a userList.fnName
+4. move <ul id="userList / tweetList"> to the respective lists.
+This means that your Controller.js (formerly List.js) creates instances of TweetList and UserList and then does something to the
+effect of
+document.getElementById("tweetListContainer").appendChild(tweetList.getDom());
+
+(function() {
+	var makeAjaxCall = function(args) {
+
+	}
+	sukhmeet = {
+		fn: function() {
+			makeAjaxCall();
+		}
+	}
+})();

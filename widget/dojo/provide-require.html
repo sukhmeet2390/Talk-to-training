@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Hello Dojo!</title>
+    <link rel="stylesheet" type="text/css" href="../js/dojotoolkit/dijit/themes/tundra/tundra.css" />
+    <!-- load Dojo -->
+    <script type="text/javascript">
+    djConfig = {
+    	parseOnLoad : true,
+    	isDebug : false,
+        baseUrl : './'
+	}
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script>
+    <script type="text/javascript">
+        dojo.registerModulePath("dtdg","./dtdg");
+        dojo.require("dtdg.foo");
+        dojo.ready(function(){
+            dojo.body().innerHTML = "fib(5) -> "+ dtdg.foo.fibonacci(6);
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>
